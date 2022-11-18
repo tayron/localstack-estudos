@@ -14,6 +14,10 @@ aws --endpoint-url=http://127.0.0.1:4566 s3api list-buckets
 ```sh
 aws --endpoint-url=http://127.0.0.1:4566 sqs create-queue --queue-name sample-queue --region eu-central-1 --profile default --output table | cat
 ```
+## Criando mensagem SQS
+```sh
+aws --endpoint-url=http://localhost:4566 sqs send-message --queue-url http://localhost:4567/sample-queue --message-body 'example'
+```
 
 ## Listando filas SQS
 ```sh
