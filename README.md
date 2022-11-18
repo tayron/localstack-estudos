@@ -24,6 +24,11 @@ aws --endpoint-url=http://localhost:4566 sqs send-message --queue-url http://loc
 aws --endpoint-url=http://127.0.0.1:4566 sqs list-queues
 ```
 
+## Criando mensagem SQS
+```sh
+aws --endpoint-url=http://localhost:4566 sqs send-message --queue-url http://localhost:4567/sample-queue --message-body 'example'
+```
+
 ## Criando mensagens SNS
 ```sh
 aws --endpoint-url=http://localhost:4566 sns create-topic --name order-creation-events --region eu-central-1 --profile default --output table | cat
