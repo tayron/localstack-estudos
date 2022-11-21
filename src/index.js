@@ -7,7 +7,7 @@ async function main () {
     const createdQueue = await createQueue('queue-name')
     console.log({ createdQueue })
     const createdMessage = await addMessage('http://127.0.0.1/000000000000/queue-name', 'test-message')
-    console.log({ createdMessage });
+    console.log({ createdMessage })
   } catch (error) {
     throw new Error(error);
   }
