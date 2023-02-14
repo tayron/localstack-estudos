@@ -34,6 +34,11 @@ aws --endpoint-url=http://localhost:4567 sqs send-message --queue-url http://loc
 aws --endpoint-url=http://localhost:4567 sqs receive-message --queue-url http://localhost:4567/000000000000/sample-queue
 ```
 
+## Apagando todas as mensagens SQS
+```sh
+aws --endpoint-url=http://localhost:4567 sqs purge-queue --queue-url http://localhost:4567/000000000000/sample-queue
+```
+
 ## Criando mensagens SNS
 ```sh
 aws --endpoint-url=http://localhost:4567 sns create-topic --name order-creation-events --region eu-central-1 --profile default --output table | cat
